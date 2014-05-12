@@ -27,13 +27,13 @@
 		<div class="form-group">
 		<div class="checkbox">
 			<label>
-				<input type="checkbox"> Remember me
+				<input type="checkbox" id="remember_me" value="123" /> Remember me
 			</label>
 		</div>
 		</div>
 		</form>
 		<div class="form-group">
-		<button class="btn btn-default" id="login-submit">登录</button>
+		<button class="btn btn-default" id="login_submit">登录</button>
 		</div>
 	</div>
 	<div class="col-md-1" style="border:solid red 1px;"></div>
@@ -45,13 +45,16 @@
 <script src="__ROOT__/Public/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
-	$('#login-submit').click(function(){
+	$('#login_submit').click(function(){
+		var a=document.getElementById('remember_me').checked;
+		alert(a);//attr('checked'));
 		$.post('__MODULE__/Index/login',{
 			"username":$('#username').val(),
 			"password":$('#password').val()
 		},
 		function(data, textStatus, jqXHR){
-			alert(data[0]);
+//			alert(data);
+			
 		},'json');
 	});
 });

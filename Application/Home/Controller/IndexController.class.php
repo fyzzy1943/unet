@@ -4,8 +4,7 @@ use Think\Controller;
 
 class IndexController extends Controller
 {
-	public function index()
-	{
+	public function index(){
 		$user = M('user');
 		$data = $user->select();
 		dump($data);
@@ -15,9 +14,10 @@ class IndexController extends Controller
 	}
 	
 	public function login(){
-		$data[]='success';
-		$data[]='failed';
+		$username=I('post.username');
+		$password=I('post.password');
+		$data[]=$username;
+		$data[]=$password;
 		$this->ajaxReturn($data);
-		
 	}
 }
