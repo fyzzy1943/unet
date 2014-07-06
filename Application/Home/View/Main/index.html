@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<title>Welcome</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/bootstrap.css" />
+</head>
+<body>
+      
+<div class="container">
+<div class="row">
+	<div class="col-md-1" style="border:solid red 1px;"></div>
+	<div class="col-md-10">
+		<h1>friend</h1>
+		<foreach name="friend" item="vo">
+			{$vo.uid} | {$vo.fid} <br />
+		</foreach>
+	</div>
+	<div class="col-md-1" style="border:solid red 1px;"></div>
+</div><!-- row end -->
+</div><!-- container end -->
+
+<script src="__ROOT__/Public/js/jquery.js"></script>
+<script src="__ROOT__/Public/js/bootstrap.js"></script>
+<script>
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

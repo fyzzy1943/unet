@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 	<title>Welcome</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/unet/Public/css/bootstrap.css" />
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -90,18 +90,18 @@
 </div><!-- row end -->
 </div><!-- container end -->
 
-<script src="__ROOT__/Public/js/jquery.js"></script>
-<script src="__ROOT__/Public/js/bootstrap.js"></script>
+<script src="/unet/Public/js/jquery.js"></script>
+<script src="/unet/Public/js/bootstrap.js"></script>
 <script>
 $(document).ready(function(){
 	$('#form1').on('submit', function(){
-		$.post('__MODULE__/Index/login',{
+		$.post('/unet/index.php/Home/Index/login',{
 			'username':$('#username').val(),
 			'password':$('#password').val()
 		},
 		function(data, textStatus, jqXHR){
 			if(data=='success'){
-				window.location.href='__MODULE__/Main/index';
+				window.location.href='/unet/index.php/Home/Main/index';
 			}else{
 				alert('failed');
 			}
