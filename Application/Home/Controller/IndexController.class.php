@@ -25,7 +25,6 @@ class IndexController extends Controller
 				$data='success';
 				session('username', $username);
 				session('uid', $result['id']);
-// 				$this->redirect('Main/index');
 			}else{
 				
 			}

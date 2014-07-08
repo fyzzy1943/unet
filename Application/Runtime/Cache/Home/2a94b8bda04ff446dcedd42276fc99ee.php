@@ -4,7 +4,7 @@
 	<title>Welcome</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="/unet/Public/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/unet/Public/css/bootstrap.min.css" />
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -68,11 +68,11 @@
 		<form role="form" class="form-horizontal" id="form1">
 		<div class="form-group">
 			<label class="sr-only" for="username">username</label>
-			<input type="text" class="form-control" id="username" name="username" placeholder="username" />
+			<input type="text" class="form-control" id="username" placeholder="username" />
 		</div>
 		<div class="form-group">
 			<label class="sr-only" for="password">password</label>
-			<input type="text" class="form-control" id="password" name="password" placeholder="password" />
+			<input type="text" class="form-control" id="password" placeholder="password" />
 		</div>
 		<div class="form-group">
 			<div class="checkbox">
@@ -90,8 +90,8 @@
 </div><!-- row end -->
 </div><!-- container end -->
 
-<script src="/unet/Public/js/jquery.js"></script>
-<script src="/unet/Public/js/bootstrap.js"></script>
+<script src="/unet/Public/js/jquery.min.js"></script>
+<script src="/unet/Public/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
 	$('#form1').on('submit', function(){
@@ -100,6 +100,7 @@ $(document).ready(function(){
 			'password':$('#password').val()
 		},
 		function(data, textStatus, jqXHR){
+			alert(data);
 			if(data=='success'){
 				window.location.href='/unet/index.php/Home/Main/index';
 			}else{

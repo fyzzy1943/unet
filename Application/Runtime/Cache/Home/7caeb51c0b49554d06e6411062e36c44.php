@@ -4,7 +4,7 @@
 	<title>Welcome</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="/unet/Public/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/unet/Public/css/bootstrap.min.css" />
 </head>
 <body>
       
@@ -19,8 +19,8 @@
 </div><!-- row end -->
 </div><!-- container end -->
 
-<script src="/unet/Public/js/jquery.js"></script>
-<script src="/unet/Public/js/bootstrap.js"></script>
+<script src="/unet/Public/js/jquery.min.js"></script>
+<script src="/unet/Public/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
 
