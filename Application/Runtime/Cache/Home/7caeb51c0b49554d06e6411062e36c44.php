@@ -14,6 +14,7 @@
 	<div class="col-md-10">
 		<h1>friend</h1>
 		<?php if(is_array($friend)): foreach($friend as $key=>$vo): echo ($vo["uid"]); ?> | <?php echo ($vo["fid"]); ?> <br /><?php endforeach; endif; ?>
+		<a href="/unet/index.php/Home/Main/newInfo" class="btn btn-primary">添加</a>
 	</div>
 	<div class="col-md-1" style="border:solid red 1px;"></div>
 </div><!-- row end -->

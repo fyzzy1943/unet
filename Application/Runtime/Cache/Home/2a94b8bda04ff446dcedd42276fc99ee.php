@@ -100,14 +100,12 @@ $(document).ready(function(){
 			'password':$('#password').val()
 		},
 		function(data, textStatus, jqXHR){
-			alert(data);
 			if(data=='success'){
 				window.location.href='/unet/index.php/Home/Main/index';
 			}else{
 				alert('failed');
 			}
 		},'json');
-		
 		return false;
 	});
 });
