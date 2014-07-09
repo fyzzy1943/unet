@@ -1,6 +1,6 @@
 css
-	bootstrap.min.css	-min.3.2.0
+	bootstrap.min.css	-3.2.0
 	
 js
-	bootstrap.js	-min.3.2.0
-	jquery.js		-min.1.11.1
+	bootstrap.js	-3.2.0
+	jquery.min.js	-1.11.1
