@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 	<title>Welcome</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/unet/Public/css/bootstrap.min.css" />
 </head>
 <body>
       
@@ -218,7 +218,7 @@
 			<div class="form-group">
 				<div class="col-sm-offset-3 col-sm-7">
 					<input type="submit" class="btn btn-default" value="添加" /> 
-					<a href="__MODULE__/Main/index" class="btn btn-default">返回</a>
+					<a href="/unet/index.php/Home/Main/index" class="btn btn-default">返回</a>
 				</div>
 			</div>
 		</div>
@@ -229,12 +229,12 @@
 </div><!-- row end -->
 </div><!-- container end -->
 
-<script src="__ROOT__/Public/js/jquery.min.js"></script>
-<script src="__ROOT__/Public/js/bootstrap.min.js"></script>
+<script src="/unet/Public/js/jquery.min.js"></script>
+<script src="/unet/Public/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
 	$('#form1').on('submit', function(){
-		$.post('__MODULE__/Main/addInfo',{
+		$.post('/unet/index.php/Home/Main/addInfo',{
 			'name':$('#name').val(),
 			'used_name':$('#used_name').val(),
 			'alias':$('#alias').val(),

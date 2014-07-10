@@ -2,16 +2,36 @@
 namespace Home\Controller;
 use Think\Controller;
 
+/**
+ * 中央控制器
+ * @author Administrator
+ *
+ */
 class MainController extends Controller
 {
 	public function index(){
-		$friend=M('friend');
-		$result=$friend->where("uid='%s'", array(session('uid')))->select();
-		$this->assign('friend', $result);
+		$info_relation=M('info_relation');
+		//查出所有info_id
+		$infoList=$info_relation->field('info_id')->where("user_id='%s'", array(session('uid')))->select();
+		$infoList=array_column($infoList, 'info_id');
+		var_dump($infoList);
+		
+		//组合查询条件，查出所有info
+		$cond='';
+		foreach($infoList as $value){
+			$cond.="$value,";
+		}
+		$cond=rtrim($cond, ',');
+		
+		$friend_info=M('friend_info');
+		$friendList=$friend_info->where("id IN ($cond)")->select();
+		var_dump($friendList);
+		$this->assign('friendList', $friendList);
+		
 		$this->display(T('Main/index'));
 	}
 	
-	public function newInfo(){
+	public function showAddInfo(){
 		$this->display(T('Info/add'));
 	}
 	
@@ -46,10 +66,20 @@ class MainController extends Controller
 		$data['used_address']=I('used_address');
 		$data['remark']=I('remark');
 		
-		$personal_info=M('personal_info');
-		$personal_info->create($data);
-		
-		$this->ajaxReturn('success');
+		$personal_info=M('friend_info');
+		$insertID=$personal_info->add($data);
+		if($insertID){
+			//插入到数据库成功
+			//插入关系
+			$info_relation=M('info_relation');
+			unset($data);
+			$data['user_id']=session('uid');
+			$data['info_id']=$insertID;
+			$insertID=$info_relation->add($data);
+
+			$this->ajaxReturn('success');
+		}
+		$this->ajaxReturn('failed');
 	}
 	
 	public function edit(){
