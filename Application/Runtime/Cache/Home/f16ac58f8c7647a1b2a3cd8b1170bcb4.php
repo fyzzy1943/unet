@@ -30,12 +30,12 @@
 				<div class="col-sm-7">
 				<div class="input-group">
 					<input type="text" class="form-control" id="note_name" />
-					<div class="btn input-group-addon" data-toggle="collapse" data-target="#other_name">+</div>
+					<div class="btn input-group-addon" data-toggle="collapse" data-target="#otherName"><span class="caret"></span></div>
 				</div>
 				</div>
 			</div>
 			
-			<div id="other_name" class="collapse">
+			<div id="otherName" class="collapse">
 			<div class="form-group">
 				<label for="used_name" class="col-sm-3 control-label">曾用名 </label>
 				<div class="col-sm-7">
@@ -54,7 +54,7 @@
 					<input type="text" class="form-control" id="pen_name" />
 				</div>
 			</div>
-			</div><!-- id="other_name" -->
+			</div><!-- id="otherName" -->
 			
 			<div class="form-group">
 				<label for="sex" class="col-sm-3 control-label">性别 </label>
@@ -70,7 +70,62 @@
 			<div class="form-group">
 				<label for="birthday" class="col-sm-3 control-label">生日 </label>
 				<div class="col-sm-7">
+				<div class="input-group">
 					<input type="text" class="form-control" id="birthday" />
+					<div class="btn input-group-addon" data-toggle="collapse" data-target="#dateSelector"><span class="caret"></span></div>
+				</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-7">
+				<div id="dateSelector" class="collapse">
+					<select id="idYear" name="idYear" data="1943"></select>年 
+					<select id="idMonth" name="idMonth" data="1"></select>月 
+					<select id="idDay" name="idDay" data="1"></select>日
+					<button class="btn btn-default" id="dateOK">确定</button>
+				</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nationality" class="col-sm-3 control-label">民族 </label>
+				<div class="col-sm-7">
+				<div class="input-group">
+					<input type="text" class="form-control" id="nationality" />
+					<div class="btn input-group-addon" data-toggle="collapse" data-target="#nationalitySelector"><span class="caret"></span></div>
+				</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-7">
+				<div id="nationalitySelector" class="collapse">
+					<select id="nationalityList" class="form-control" size="5">
+						<option value="汉族">汉族</option>
+						<option value="满族">满族</option>
+						<option value="蒙古族">蒙古族</option>
+						<option value="回族">回族</option>
+						<option value="藏族">藏族</option>
+						<option value="维吾尔族">维吾尔族</option>
+						<option value="哈萨克族">哈萨克族</option>
+						<option value="苗族">苗族</option>
+						<option value="彝族">彝族</option>
+						<option value="壮族">壮族</option>
+						<option value="布依族">布依族</option>
+						<option value="朝鲜族">朝鲜族</option>
+						<option value="怒族">怒族</option>
+					</select>
+				</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="email" class="col-sm-3 control-label">电子邮箱 </label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" id="email" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="id_card" class="col-sm-3 control-label">身份证号 </label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" id="id_card" />
 				</div>
 			</div>
 		</div><!-- class="col-md-6" -->
@@ -78,21 +133,9 @@
 		<div class="col-md-6">
 			
 			<div class="form-group">
-				<label for="nationality" class="col-sm-3 control-label">民族 </label>
-				<div class="col-sm-7">
-					<input type="text" class="form-control" id="nationality" />
-				</div>
-			</div>
-			<div class="form-group">
 				<label for="citizenship" class="col-sm-3 control-label">国籍 </label>
 				<div class="col-sm-7">
 					<input type="text" class="form-control" id="citizenship" />
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="marital_status" class="col-sm-3 control-label">婚姻状况 </label>
-				<div class="col-sm-7">
-					<input type="text" class="form-control" id="marital_status" />
 				</div>
 			</div>
 			<div class="form-group">
@@ -102,21 +145,15 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="marital_status" class="col-sm-3 control-label">婚姻状况 </label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" id="marital_status" />
+				</div>
+			</div>
+			<div class="form-group">
 				<label for="health_status" class="col-sm-3 control-label">健康状况 </label>
 				<div class="col-sm-7">
 					<input type="text" class="form-control" id="health_status" />
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="birth_place" class="col-sm-3 control-label">出生地 </label>
-				<div class="col-sm-7">
-					<input type="text" class="form-control" id="birth_place" />
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="native_place" class="col-sm-3 control-label">籍贯 </label>
-				<div class="col-sm-7">
-					<input type="text" class="form-control" id="native_place" />
 				</div>
 			</div>
 			<div class="form-group">
@@ -125,6 +162,7 @@
 					<input type="text" class="form-control" id="political_status" />
 				</div>
 			</div>
+			<hr />
 			<div class="form-group">
 				<label for="education" class="col-sm-3 control-label">学历 </label>
 				<div class="col-sm-7">
@@ -149,6 +187,7 @@
 					<input type="text" class="form-control" id="minor" />
 				</div>
 			</div>
+			<hr />
 			<div class="form-group">
 				<label for="position" class="col-sm-3 control-label">现任职务 </label>
 				<div class="col-sm-7">
@@ -161,6 +200,7 @@
 					<input type="text" class="form-control" id="used_position" />
 				</div>
 			</div>
+			<hr />
 			<div class="form-group">
 				<label for="home_phone" class="col-sm-3 control-label">住宅电话 </label>
 				<div class="col-sm-7">
@@ -185,16 +225,17 @@
 					<input type="text" class="form-control" id="used_mobile_phone" />
 				</div>
 			</div>
+			<hr />
 			<div class="form-group">
-				<label for="email" class="col-sm-3 control-label">电子邮箱 </label>
+				<label for="birth_place" class="col-sm-3 control-label">出生地 </label>
 				<div class="col-sm-7">
-					<input type="text" class="form-control" id="email" />
+					<input type="text" class="form-control" id="birth_place" />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="id_card" class="col-sm-3 control-label">身份证号 </label>
+				<label for="native_place" class="col-sm-3 control-label">籍贯 </label>
 				<div class="col-sm-7">
-					<input type="text" class="form-control" id="id_card" />
+					<input type="text" class="form-control" id="native_place" />
 				</div>
 			</div>
 			<div class="form-group">
@@ -231,8 +272,37 @@
 
 <script src="/unet/Public/js/jquery.min.js"></script>
 <script src="/unet/Public/js/bootstrap.min.js"></script>
+<script src="/unet/Public/js/calender.js"></script>
 <script>
 $(document).ready(function(){
+	var myDate = new Date();
+	$("#dateSelector").DateSelector({
+		ctlYearId: 'idYear',
+		ctlMonthId: 'idMonth',
+		ctlDayId: 'idDay',
+		defYear: myDate.getFullYear(),
+		defMonth: (myDate.getMonth()+1),
+		defDay: myDate.getDate(),
+		minYear: 1800,
+		maxYear: (myDate.getFullYear()+1)
+	});
+	
+	/* 生日点击确定 */
+	$('#dateOK').click(function(){
+		var $year=$('#idYear').children('option:selected').val();
+		var $month=$('#idMonth').children('option:selected').val();
+		var $day=$('#idDay').children('option:selected').val();
+		var date=$year+'年'+$month+'月'+$day+'日';
+		$('#birthday').val(date);
+		$('#dateSelector').collapse('hide');
+	});
+	
+	/* 选择民族 */
+	$('#nationalityList').change(function(){
+		$('#nationality').val($('#nationalityList').children('option:selected').val());
+		$('#nationalitySelector').collapse('hide');
+	});
+	
 	$('#form1').on('submit', function(){
 		$.post('/unet/index.php/Home/Main/addInfo',{
 			'name':$('#name').val(),
